@@ -9,7 +9,6 @@ const loader = new GLTFLoader()
 loader.load('assets/wraith.glb', function(glb){
      console.log(glb)
      const root = glb.scene;
-     // scene.add(root)
      root.scale.set(0.03,0.03,0.03)
 }, function(xhr){
      console.log((xhr.loaded/xhr.total * 100) + "% loaded")
@@ -47,9 +46,9 @@ renderer.shadowMap.enabled = true
 renderer.gammaOutput = true
 renderer.render(scene,camera)
 
-// function animate(){
-//      requestAnimationFrame(animate)
-//      renderer.render(scene,camera)
-// }
+function animate(){
+     requestAnimationFrame(animate)
+     renderer.render(scene,camera)
+}
 
-// animate()
+animate()
