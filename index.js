@@ -1,25 +1,25 @@
 import * as THREE from './three.js-master (1)/three.js-master/build/three.module.js'
-// import {GLTFLoader} from './three.js-master (1)/three.js-master/examples/jsm/loaders/GLTFLoader.js'
+import {GLTFLoader} from './three.js-master (1)/three.js-master/examples/jsm/loaders/GLTFLoader.js'
 
-// console.log(THREE)
+console.log(THREE)
 const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
 
-// const loader = new GLTFLoader()
-// loader.load('assets/wraith.glb', function(glb){
-//      console.log(glb)
-//      const root = glb.scene;
-//      // scene.add(root)
-//      root.scale.set(0.03,0.03,0.03)
-// }, function(xhr){
-//      console.log((xhr.loaded/xhr.total * 100) + "% loaded")
-// }, function(error){
-//      console.log('An error occured')
-// })
+const loader = new GLTFLoader()
+loader.load('assets/wraith.glb', function(glb){
+     console.log(glb)
+     const root = glb.scene;
+     // scene.add(root)
+     root.scale.set(0.03,0.03,0.03)
+}, function(xhr){
+     console.log((xhr.loaded/xhr.total * 100) + "% loaded")
+}, function(error){
+     console.log('An error occured')
+})
 
-// const light = new THREE.DirectionalLight(0xffffff, 1)
-// light.position.set(2,2,5)
-// scene.add(light)
+const light = new THREE.DirectionalLight(0xffffff, 1)
+light.position.set(2,2,5)
+scene.add(light)
 
 
 
